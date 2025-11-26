@@ -40,7 +40,7 @@ class MockHistory extends HistoryProvider {
       : super(storage, maxSizeDefault: 50);
 }
 
-/// UNIT TESTS
+// UNIT TESTS
 void main() {
   late CalculatorProvider calc;
   late MockStorage mockStorage;
@@ -55,7 +55,7 @@ void main() {
     );
   });
 
-  /// BASIC OPERATIONS
+  // Basic operations
   test('Basic: 5 + 3 = 8', () async {
     calc.addToExpression('5+3');
     await calc.calculate();
@@ -89,7 +89,7 @@ void main() {
     expect(calc.result, 'NaN');
   });
 
-  /// SCIENTIFIC FUNCTIONS
+  // Scientific functions
   test('Scientific: sin(45°) + cos(45°) ≈ 1.414', () async {
     calc.addToExpression('sin(45)');
     await calc.calculate();
@@ -114,7 +114,7 @@ void main() {
   expect(double.parse(calc.result), closeTo(0.5, 0.01));
 });
 
-  /// MEMORY OPERATIONS
+  // Memory functions
   test('Memory: 5 M+ 3 M+ MR = 8', () async {
   calc.clear();
   calc.addToExpression('5');
@@ -126,7 +126,7 @@ void main() {
   expect(double.parse(calc.result), 8.0);
 });
 
-  /// CHAIN CALCULATIONS
+  // chain calculations
   test('Chain: 5+3 = +2 = +1 = 11', () async {
     calc.addToExpression('5+3');
     await calc.calculate();
@@ -138,14 +138,14 @@ void main() {
     expect(calc.result, '11');
   });
 
-  /// PARENTHESES NESTING
+  // Parentheses nesting
   test('Parentheses: ((2+3) × (4-1)) ÷ 5 = 3', () async {
     calc.addToExpression('((2+3)×(4-1))÷5');
     await calc.calculate();
     expect(calc.result, '3');
   });
 
-  /// MIXED SCIENTIFIC
+  // mixed scientific 
   test('Mixed scientific: 2 × π × √9 ≈ 18.85', () async {
     calc.addToExpression('2×π×sqrt(9)');
     await calc.calculate();
@@ -153,7 +153,7 @@ void main() {
     expect(result, closeTo(18.85, 0.1));
   });
   
-  /// PROGRAMMER MODE
+  // programmer 
   test('0x0F OR 0xF0 = 0xFF', () {
   final result = CalculatorLogic.or(0x0F, 0xF0);
   expect(result.toRadixString(16).toUpperCase(), 'FF');
