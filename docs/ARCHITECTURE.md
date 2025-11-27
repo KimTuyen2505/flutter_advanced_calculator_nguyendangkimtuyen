@@ -1,7 +1,7 @@
 
 ---
 
-# ✅ FILE 2 — ARCHITECTURE.md 
+# ✅ ARCHITECTURE.md 
 
 ```md
 # 🏛 ARCHITECTURE – Advanced Calculator (Flutter)
