@@ -1,7 +1,7 @@
 
 ---
 
-# ✅ FILE 2 — ARCHITECTURE.md (English, Beautiful, Professional)
+# ✅ FILE 2 — ARCHITECTURE.md 
 
 Copy vào `/docs/ARCHITECTURE.md` hoặc root folder:
 
