@@ -3,8 +3,6 @@
 
 # ✅ FILE 2 — ARCHITECTURE.md 
 
-Copy vào `/docs/ARCHITECTURE.md` hoặc root folder:
-
 ```md
 # 🏛 ARCHITECTURE – Advanced Calculator (Flutter)
 
